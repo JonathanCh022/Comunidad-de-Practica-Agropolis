@@ -1,0 +1,22 @@
+name: Endymion
+description: Drupal 8 Starter Theme
+type: theme
+core: 8.x
+libraries:
+  - endymion/global-css
+  - endymion/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+
+regions:
+  
+  header: 'Header'
+  menu_principal: 'Menu Principal'
+  menu_segundario: 'Menu Segundario'
+  presentacion: 'Presentacion'
+  interes: 'interes'
+  content: 'Main Content'
+  patrocinadores: 'Patrocinadores'
+  footer: 'Footer'
+  slidershow: 'Slidershow'

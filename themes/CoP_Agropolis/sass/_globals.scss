@@ -1,0 +1,446 @@
+/* =======================================================================
+## ++ Sussy
+========================================================================== */
+
+$susy:(
+	container-position: center,
+	last-flow: to,
+	columns: 12,
+	gutter: 1/4,
+	gutter-position:inside,
+
+	);
+
+/* =======================================================================
+## ++ Parallax css
+========================================================================== */
+
+.parallax{
+	/* The image used */
+    background-image: url("../images/bg-1.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* =======================================================================
+## ++ Globals
+========================================================================== */
+
+html{
+    font-size: 100%;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.container{
+	@include container(800px);
+
+}
+
+.layout-container{
+	@include container(1000px);
+
+}
+
+.agropolis-info{
+	margin-top:15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+.agropolis-info-cont{
+	background-color:#94b8b8;
+	margin: 8px;
+	width: 250px;
+    height: 290px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    
+    ul{
+    	list-style-type: circle;
+    	margin-left: 50px;
+    }
+
+    h3{
+    	margin: 25px 25px;
+    }
+
+    img{
+    	display:block;
+		margin:auto;
+    }
+}
+
+.drop-shadow {    
+    
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3),0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+    border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 0px solid #18bdbd;
+}
+
+hr {
+  height: .25rem;
+  width: 21%;  
+  background: white;
+  border: none;  
+}
+
+.seccion_1{	
+	height:720px;
+	background: linear-gradient(to right, #004d1a ,#00cc44);
+	
+    text-justify: inter-word;
+    
+	color: white;
+		
+		h1{
+			padding-top: 50px;
+			font-size:32px;			
+			text-align: center;		    
+		    font-family: Arial Black;
+		}
+
+		p{
+			padding-top: 50px;
+			font-size:14px;
+			text-align: justify;
+			line-height: 150%;
+			font-family: sans-serif;
+		}
+
+
+}
+
+
+.seccion_2{	
+	height:720px;
+	background: #333333;
+	
+    text-justify: inter-word;
+    
+	color: white;
+		
+		h1{
+			padding-top: 50px;
+			font-size:32px;			
+			text-align: center;		    
+		    font-family: Arial Black;
+		}
+
+		p{
+			padding-top: 50px;
+			font-size:16px;
+			text-align: justify;
+			line-height: 150%;
+		}
+
+
+}
+
+.transbox{
+	
+	min-height: 500px; 
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+/* =======================================================================
+## ++ Datos seccion
+========================================================================== */
+
+.datos-container{
+	
+	display:flex;
+	flex-direction: row;
+	justify-content:space-evenly;		
+	width:80%;
+
+
+}
+
+.datos-item{
+	width:20%;
+	height:270px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border: 0px solid #18bdbd;
+}
+
+.datos-item-info{
+	background-color: tomato;
+	margin: 20% 5% 5% 5%;
+	
+}
+
+/* =======================================================================
+## ++ Noticias seccion
+========================================================================== */
+
+
+.seccion_2 .container{
+	@include container(600px);
+}
+
+ .seccion_2 .views-element-container .skin-default{ 	
+
+ 	background-color:#94b8b8;
+ 	border-style: outset;
+ 	border-width: 4px;	
+ 	border-color: #94b8b8;
+ 	margin-top:25px;
+ 	height:600px;
+
+ 	.views_slideshow_main {
+ 		margin:30px;
+ 		font-family: sans-serif;
+
+ 		.views-field-title{
+ 			
+ 			width:80%;
+ 			margin-left:10%;	
+ 			border-bottom-style:solid;
+ 			border-width: 4px;				
+
+ 			span{
+ 				
+ 				font-size:40px;
+ 				
+ 			}
+
+ 			a{
+ 				text-decoration:none;
+ 			}
+ 		}
+
+ 		.views-field-field-imagen-principal{ 			
+ 			margin:20px;
+
+ 			.image{
+ 				margin-left:1%;
+
+ 				img{
+ 					background-color:white;
+ 					border: 1px solid #ddd; /* Gray border */
+				    border-radius: 4px;  /* Rounded border */
+				    padding: 5px; /* Some padding */
+
+				    &:hover{
+				    	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+				    }
+ 				}
+ 			}
+ 		}
+
+ 		.views-field-body{
+
+
+
+ 			p{
+ 				margin:5px;
+ 				padding-top:0;
+ 			}
+ 		}
+ 	}
+ } 
+
+
+/* =======================================================================
+## ++ slideshow
+========================================================================== */
+
+.slidershow{
+	width: 100%;
+	height: 700px;
+	overflow:hidden;
+
+	img{
+		width: 100%;
+		height: 80%;
+	}
+}
+
+.views-slideshow-controls-bottom {
+	display:flex;	
+	background-color: blue;
+	color:#fff;
+	text-decoration:none;
+	
+	
+}
+
+.views_slideshow_controls_text{
+	
+	margin-top: -345px;
+	z-index: 5;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	a{
+		display:block;  
+		background: white;
+  		opacity:0.3;		
+  		margin-top:18%;  		
+  		width: 100%;
+  		height: 100%;
+
+  		&:hover{
+  			background: white;
+  			opacity:0.8;
+  		}
+  	}
+
+  	img{
+   		height: 100%;
+   		width: 100%;
+   		opacity:0.7;
+
+   		&:hover{
+   			opacity:1.0;
+
+   		}
+   	}
+
+  	
+}
+
+.views_slideshow_controls_text_previous , .views_slideshow_controls_text_next {
+	display:block;
+	margin: 0 20px 0 20px;
+	height:70px;
+	width: 70px;	
+	border-radius: 3px 3px 3px 3px;  
+}
+
+.views_slideshow_main {
+	
+	img{
+		height: 690px;
+	}
+}
+
+
+
+
+/* =======================================================================
+## ++ Page Noticias
+========================================================================== */
+
+.cols-0 td {
+	padding-bottom:15px;
+
+}
+
+.views-field-body{
+	 text-align: justify;
+	 vertical-align: top;	 
+	 padding-top:15px;
+	 font-size: 24px;
+}
+
+
+.views-field-field-imagen-principal{	
+	 img{
+	 	height:200px;
+	 	width: 100%;
+	 }	
+}
+
+.views-field-title{
+	 text-align: center;
+	 width:200px;
+	 vertical-align: top;
+	 padding-top:50px;
+}
+
+
+
+/* =======================================================================
+## ++ Page Noticia
+========================================================================== */
+
+
+.js-quickedit-page-title{
+	display:block;	
+	text-align: center;
+	margin:50px;
+	font-family:Tahoma;
+	font-size:36px;	
+}
+
+.imagen_principal{
+	display:flex;
+	justify-content: center;		 
+}
+
+.contenido_noticia{
+	margin-top:5%;
+}
+
+/* =======================================================================
+## ++ Cleafix
+========================================================================== */
+
+/* float clearing for IE6 */
+* html .clearfix{
+ height: 1%;
+ overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+ min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0;
+}
+
+.clr{clear:both;}
+
+
+
+
+
+
